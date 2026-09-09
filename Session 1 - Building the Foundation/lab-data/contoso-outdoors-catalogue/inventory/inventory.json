@@ -1,0 +1,70 @@
+{
+  "generated": "2026-09-03T00:00:00Z",
+  "note": "Mock stock feed for the check_inventory tool. Stock levels appear nowhere in the catalogue documents by design.",
+  "items": [
+    {
+      "sku": "CO-TNT-S2P",
+      "name": "Summit 2P Tent",
+      "in_stock": true,
+      "quantity": 14,
+      "lead_time_days": 2,
+      "warehouse": "Seattle, WA"
+    },
+    {
+      "sku": "CO-TNT-S4P",
+      "name": "Summit 4P Tent",
+      "in_stock": false,
+      "quantity": 0,
+      "lead_time_days": 21,
+      "warehouse": "Seattle, WA"
+    },
+    {
+      "sku": "CO-SLP-R20",
+      "name": "Ridgeline 20 Sleeping Bag",
+      "in_stock": true,
+      "quantity": 63,
+      "lead_time_days": 2,
+      "warehouse": "Denver, CO"
+    },
+    {
+      "sku": "CO-APP-A800",
+      "name": "Alpine 800 Down Jacket",
+      "in_stock": true,
+      "quantity": 7,
+      "lead_time_days": 3,
+      "warehouse": "Denver, CO"
+    },
+    {
+      "sku": "CO-APP-CRS",
+      "name": "Cascade Rain Shell",
+      "in_stock": true,
+      "quantity": 28,
+      "lead_time_days": 2,
+      "warehouse": "Seattle, WA"
+    },
+    {
+      "sku": "CO-PCK-T45",
+      "name": "Trailhead 45 Backpack",
+      "in_stock": true,
+      "quantity": 41,
+      "lead_time_days": 2,
+      "warehouse": "Denver, CO"
+    },
+    {
+      "sku": "CO-CKG-BCS",
+      "name": "Basecamp Stove",
+      "in_stock": true,
+      "quantity": 96,
+      "lead_time_days": 2,
+      "warehouse": "Seattle, WA"
+    },
+    {
+      "sku": "CO-FTW-TTB",
+      "name": "Trekker Trail Boots",
+      "in_stock": true,
+      "quantity": 19,
+      "lead_time_days": 4,
+      "warehouse": "Portland, OR"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Contoso Outdoors Inventory API",
+    "description": "Returns current stock level and lead time for a Contoso product SKU. Use this for ANY question about availability, stock, or delivery time.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://stgenaiworkshopREPLACEME.blob.core.windows.net/inventory-api",
+      "description": "Replace stgenaiworkshopREPLACEME with your own storage account name from Lab 1 Exercise 3."
+    }
+  ],
+  "paths": {
+    "/{sku}.json": {
+      "get": {
+        "operationId": "check_inventory",
+        "summary": "Get current stock level and lead time for a SKU",
+        "description": "Returns live stock information for one Contoso Outdoors product SKU. Stock levels and lead times are not available in any catalogue document and must be retrieved through this operation. The SKU is printed on each product page in the catalogue, for example CO-TNT-S2P for the Summit 2P Tent.",
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "path",
+            "required": true,
+            "description": "Contoso product SKU, e.g. CO-TNT-S2P",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Current stock information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sku": { "type": "string" },
+                    "name": { "type": "string" },
+                    "in_stock": { "type": "boolean" },
+                    "quantity": { "type": "integer" },
+                    "lead_time_days": { "type": "integer" },
+                    "warehouse": { "type": "string" },
+                    "as_of": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "SKU not found"
+          }
+        }
+      }
+    }
+  }
+}
